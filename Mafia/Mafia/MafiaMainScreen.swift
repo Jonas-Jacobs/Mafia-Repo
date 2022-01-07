@@ -10,11 +10,18 @@ import SwiftUI
 struct MafiaMainScreen: View {
     var body: some View {
         NavigationView{
-            Button("Create new Game"){
-                //Segue to new screen
-            }
-            Button("Find rolls") {
+            VStack{
+                ZStack{
+                    Color.red
+                .frame(width: 200, height: 50, alignment: .center)
+                Button("Create new Game"){
+                   
+                    }
+                }
                 
+                Button("Find rolls") {
+                    
+                }
             }
         }
     }
