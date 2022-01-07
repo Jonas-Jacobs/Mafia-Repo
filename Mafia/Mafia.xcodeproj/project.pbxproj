@@ -16,6 +16,8 @@
 		B927E5F72787450D003094AF /* MafiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E5F62787450D003094AF /* MafiaTests.swift */; };
 		B927E6012787450D003094AF /* MafiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E6002787450D003094AF /* MafiaUITests.swift */; };
 		B927E6032787450D003094AF /* MafiaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E6022787450D003094AF /* MafiaUITestsLaunchTests.swift */; };
+		B975271427889BF400C27117 /* MafiaMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975271327889BF400C27117 /* MafiaMainScreen.swift */; };
+		B975271627889CE600C27117 /* MafiaRoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975271527889CE600C27117 /* MafiaRoles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B927E5FC2787450D003094AF /* MafiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MafiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B927E6002787450D003094AF /* MafiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaUITests.swift; sourceTree = "<group>"; };
 		B927E6022787450D003094AF /* MafiaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B975271327889BF400C27117 /* MafiaMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaMainScreen.swift; sourceTree = "<group>"; };
+		B975271527889CE600C27117 /* MafiaRoles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaRoles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				B927E5E12787450C003094AF /* SceneDelegate.swift */,
 				B927E5E32787450C003094AF /* ViewController.swift */,
 				B927E5E52787450C003094AF /* Main.storyboard */,
+				B975271327889BF400C27117 /* MafiaMainScreen.swift */,
+				B975271527889CE600C27117 /* MafiaRoles.swift */,
 				B927E5E82787450D003094AF /* Assets.xcassets */,
 				B927E5EA2787450D003094AF /* LaunchScreen.storyboard */,
 				B927E5ED2787450D003094AF /* Info.plist */,
@@ -261,6 +267,8 @@
 				B927E5E42787450C003094AF /* ViewController.swift in Sources */,
 				B927E5E02787450C003094AF /* AppDelegate.swift in Sources */,
 				B927E5E22787450C003094AF /* SceneDelegate.swift in Sources */,
+				B975271427889BF400C27117 /* MafiaMainScreen.swift in Sources */,
+				B975271627889CE600C27117 /* MafiaRoles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
