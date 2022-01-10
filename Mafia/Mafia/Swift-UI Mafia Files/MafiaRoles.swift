@@ -55,7 +55,7 @@ struct MafiaRoles: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        MembersList()
+                        MembersList(numberOfPlayers: numberOfPlayers)
                     } label: {
                         Text("Done")
                     }
