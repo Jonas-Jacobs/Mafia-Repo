@@ -16,8 +16,9 @@
 		B927E5F72787450D003094AF /* MafiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E5F62787450D003094AF /* MafiaTests.swift */; };
 		B927E6012787450D003094AF /* MafiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E6002787450D003094AF /* MafiaUITests.swift */; };
 		B927E6032787450D003094AF /* MafiaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E6022787450D003094AF /* MafiaUITestsLaunchTests.swift */; };
-		B975271427889BF400C27117 /* MafiaMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975271327889BF400C27117 /* MafiaMainScreen.swift */; };
-		B975271627889CE600C27117 /* MafiaRoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975271527889CE600C27117 /* MafiaRoles.swift */; };
+		B94CCD32278C954300FA20A4 /* MafiaMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94CCD30278C954300FA20A4 /* MafiaMainScreen.swift */; };
+		B94CCD33278C954300FA20A4 /* MafiaRoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94CCD31278C954300FA20A4 /* MafiaRoles.swift */; };
+		B975271B2788E94300C27117 /* MembersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975271A2788E94300C27117 /* MembersList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,9 @@
 		B927E5FC2787450D003094AF /* MafiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MafiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B927E6002787450D003094AF /* MafiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaUITests.swift; sourceTree = "<group>"; };
 		B927E6022787450D003094AF /* MafiaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B975271327889BF400C27117 /* MafiaMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaMainScreen.swift; sourceTree = "<group>"; };
-		B975271527889CE600C27117 /* MafiaRoles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaRoles.swift; sourceTree = "<group>"; };
+		B94CCD30278C954300FA20A4 /* MafiaMainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MafiaMainScreen.swift; sourceTree = "<group>"; };
+		B94CCD31278C954300FA20A4 /* MafiaRoles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MafiaRoles.swift; sourceTree = "<group>"; };
+		B975271A2788E94300C27117 /* MembersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,9 @@
 		B97527172788A30100C27117 /* Swift-UI Mafia Files */ = {
 			isa = PBXGroup;
 			children = (
+				B94CCD30278C954300FA20A4 /* MafiaMainScreen.swift */,
+				B94CCD31278C954300FA20A4 /* MafiaRoles.swift */,
+				B975271A2788E94300C27117 /* MembersList.swift */,
 			);
 			path = "Swift-UI Mafia Files";
 			sourceTree = "<group>";
@@ -272,11 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94CCD33278C954300FA20A4 /* MafiaRoles.swift in Sources */,
 				B927E5E42787450C003094AF /* ViewController.swift in Sources */,
+				B975271B2788E94300C27117 /* MembersList.swift in Sources */,
 				B927E5E02787450C003094AF /* AppDelegate.swift in Sources */,
+				B94CCD32278C954300FA20A4 /* MafiaMainScreen.swift in Sources */,
 				B927E5E22787450C003094AF /* SceneDelegate.swift in Sources */,
-				B975271427889BF400C27117 /* MafiaMainScreen.swift in Sources */,
-				B975271627889CE600C27117 /* MafiaRoles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
