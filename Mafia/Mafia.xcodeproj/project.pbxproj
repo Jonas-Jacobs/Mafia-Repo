@@ -110,6 +110,8 @@
 				B927E5E32787450C003094AF /* ViewController.swift */,
 				B927E5E52787450C003094AF /* Main.storyboard */,
 				B97527172788A30100C27117 /* Swift-UI Mafia Files */,
+				B975271527889CE600C27117 /* MafiaRoles.swift */,
+				B975271327889BF400C27117 /* MafiaMainScreen.swift */,
 				B927E5E82787450D003094AF /* Assets.xcassets */,
 				B927E5EA2787450D003094AF /* LaunchScreen.storyboard */,
 				B927E5ED2787450D003094AF /* Info.plist */,
