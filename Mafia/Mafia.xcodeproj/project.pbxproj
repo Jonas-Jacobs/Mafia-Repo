@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BC32387278C85AB00D0B15E /* RolesInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC32386278C85AB00D0B15E /* RolesInfoView.swift */; };
+		2BC32389278C888900D0B15E /* Roles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC32388278C888900D0B15E /* Roles.swift */; };
 		B927E5E02787450C003094AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E5DF2787450C003094AF /* AppDelegate.swift */; };
 		B927E5E22787450C003094AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E5E12787450C003094AF /* SceneDelegate.swift */; };
 		B927E5E42787450C003094AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E5E32787450C003094AF /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BC32386278C85AB00D0B15E /* RolesInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolesInfoView.swift; sourceTree = "<group>"; };
+		2BC32388278C888900D0B15E /* Roles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roles.swift; sourceTree = "<group>"; };
 		B927E5DC2787450C003094AF /* Mafia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mafia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B927E5DF2787450C003094AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B927E5E12787450C003094AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				B927E5E82787450D003094AF /* Assets.xcassets */,
 				B927E5EA2787450D003094AF /* LaunchScreen.storyboard */,
 				B927E5ED2787450D003094AF /* Info.plist */,
+				2BC32386278C85AB00D0B15E /* RolesInfoView.swift */,
+				2BC32388278C888900D0B15E /* Roles.swift */,
 			);
 			path = Mafia;
 			sourceTree = "<group>";
@@ -276,6 +282,8 @@
 				B927E5E02787450C003094AF /* AppDelegate.swift in Sources */,
 				B927E5E22787450C003094AF /* SceneDelegate.swift in Sources */,
 				B975271427889BF400C27117 /* MafiaMainScreen.swift in Sources */,
+				2BC32389278C888900D0B15E /* Roles.swift in Sources */,
+				2BC32387278C85AB00D0B15E /* RolesInfoView.swift in Sources */,
 				B975271627889CE600C27117 /* MafiaRoles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -438,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
