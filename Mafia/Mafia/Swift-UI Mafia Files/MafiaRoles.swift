@@ -17,6 +17,15 @@ struct MafiaRoles: View {
     @State private var detective = 0
     @State private var numberOfPlayers = 0
     
+    @State private var showingNextScreen = false
+    @State private var alertShowing = false
+    
+    var errorMessage = "Your player number and roll numbers dont match"
+    
+    var totalNumberOfRolls: Int {
+        villager + healer + detective + mafia
+    }
+    
 // Roll number calculators (so they cannot exceed limit of numberOfPlayers)
     
     var mafiaLimit: Int {
@@ -54,16 +63,26 @@ struct MafiaRoles: View {
             .navigationTitle("Select number of players")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink {
-                        MembersList(numberOfPlayers: numberOfPlayers)
-                    } label: {
-                        Text("Done")
+                    Button("Submit") {
+                        showingNextScreen = true
                     }
+
+                    
                 }
             }
         }
+        .alert(errorMessage, isPresented: $alertShowing) {
+            Button("Continue", role: .destructive) { }
+        }
+        if showingNextScreen && alertShowing == false {
+            MembersList(numberOfPlayers: numberOfPlayers)
+        } else {
+            MafiaRoles()
+        }
+        
     }
 }
+
 
 struct MafiaRoles_Previews: PreviewProvider {
     static var previews: some View {

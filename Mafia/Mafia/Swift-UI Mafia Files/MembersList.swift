@@ -9,20 +9,24 @@ import SwiftUI
 
 struct Player: Identifiable {
     var id = UUID()
-    var name = "String"
+    var name = "Enter your name"
     var role = "String"
 }
 
 struct MembersList: View {
-    var players: [Player]
+    @State private var players: [Player]
+    
     init(numberOfPlayers: Int) {
         players = numberOfPlayers.convertToArray().map({ _ in Player() })
+        
     }
     
     var body: some View {
         NavigationView{
-            List(players, id: \.id) { players in
-                Text("hi")
+            List($players, id: \.id) { player in
+                Section{
+                    TextField("Player enter your name", text: player.name)
+                }
             }
         }
     }
