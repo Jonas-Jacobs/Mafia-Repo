@@ -17,76 +17,60 @@ struct MafiaRoles: View {
     @State private var detective = 0
     @State var numberOfPlayers = 0
     
-    @State private var passesValidation = true
+    @State private var passesValidation = false
     @State private var showingNextScreen = false
-    @State private var alertShowing = false
     
-    var errorMessage = "Your player number and roll numbers dont match"
-    
-    var totalNumberOfRolls: Int {
+    var totalNumberOfPlayers: Int {
         villager + healer + detective + mafia
-    }
-    
-    // Roll number calculators (so they cannot exceed limit of numberOfPlayers)
-    
-    var mafiaLimit: Int {
-        numberOfPlayers - villager - healer - detective
-    }
-    
-    var villagerLimit: Int {
-        numberOfPlayers - mafia - healer - detective
-    }
-    
-    var healerLimit: Int {
-        numberOfPlayers - mafia - villager - detective
-    }
-    
-    var detectiveLimit: Int {
-        numberOfPlayers - mafia - villager - healer
     }
     
     var body: some View {
         
         Form{
             Section{
-                Stepper("Number of players \(numberOfPlayers)", value: $numberOfPlayers, in: 0...20)
+                Text("Total number of players: \(totalNumberOfPlayers)")
             }
             Section(header: Text("Select number of rolls")){
-                Stepper("Mafia: \(mafia)", value: $mafia, in: 0...mafiaLimit)
+                Stepper("Mafia: \(mafia)", value: $mafia, in: 0...5)
                 
-                Stepper("Villager: \(villager)", value: $villager, in: 0...villagerLimit)
+                Stepper("Villager: \(villager)", value: $villager, in: 0...10)
                 
-                Stepper("Healer: \(healer)", value: $healer, in: 0...healerLimit)
+                Stepper("Healer: \(healer)", value: $healer, in: 0...5)
                 
-                Stepper("Detective: \(detective)", value: $detective, in: 0...detectiveLimit)
+                Stepper("Detective: \(detective)", value: $detective, in: 0...5)
             }
         }
         
         .navigationTitle("Select number of players")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                
                 if passesValidation {
                     NavigationLink("Submit",
-                                   destination: MembersList(numberOfPlayers: numberOfPlayers),
+                                   destination: MembersList(totalNumberOfPlayers: totalNumberOfPlayers),
                                    isActive: $showingNextScreen
                     )
                 } else {
                     Text("Submit")
                         .foregroundColor(.gray)
-                    
                 }
             }
         }
+        .onChange(of: totalNumberOfPlayers) { newValue in
+            if totalNumberOfPlayers >= 3 && mafia >= 1 {
+                passesValidation = true
+            } else {
+                passesValidation = false
+            }
+        }
     }
-}
-
-
-struct MafiaRoles_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-        MafiaRoles()
-                .preferredColorScheme(.dark)
+    
+    
+    struct MafiaRoles_Previews: PreviewProvider {
+        static var previews: some View {
+            NavigationView {
+                MafiaRoles()
+                    .preferredColorScheme(.dark)
+            }
         }
     }
 }

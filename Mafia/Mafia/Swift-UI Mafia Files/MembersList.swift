@@ -16,17 +16,15 @@ struct Player: Identifiable {
 struct MembersList: View {
     @State private var players: [Player]
     
-    init(numberOfPlayers: Int) {
-        players = numberOfPlayers.convertToArray().map({ _ in Player() })
+    init(totalNumberOfPlayers: Int) {
+        players = totalNumberOfPlayers.convertToArray().map({ _ in Player() })
         
     }
     
     var body: some View {
-        NavigationView{
-            List($players, id: \.id) { player in
-                Section{
-                    TextField("Player enter your name", text: player.name)
-                }
+        List($players, id: \.id) { player in
+            Section{
+                TextField("Player enter your name", text: player.name)
             }
         }
     }
@@ -34,7 +32,7 @@ struct MembersList: View {
 
 struct MembersList_Previews: PreviewProvider {
     static var previews: some View {
-        MembersList(numberOfPlayers: 5)
+        MembersList(totalNumberOfPlayers: 5)
     }
 }
 
