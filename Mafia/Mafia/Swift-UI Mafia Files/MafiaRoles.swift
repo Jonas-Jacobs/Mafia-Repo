@@ -9,14 +9,15 @@ import SwiftUI
 
 struct MafiaRoles: View {
     
-// @State roll variables
+    // @State roll variables
     
     @State private var mafia = 0
     @State private var villager = 0
     @State private var healer = 0
     @State private var detective = 0
-    @State private var numberOfPlayers = 0
+    @State var numberOfPlayers = 0
     
+    @State private var passesValidation = true
     @State private var showingNextScreen = false
     @State private var alertShowing = false
     
@@ -26,7 +27,7 @@ struct MafiaRoles: View {
         villager + healer + detective + mafia
     }
     
-// Roll number calculators (so they cannot exceed limit of numberOfPlayers)
+    // Roll number calculators (so they cannot exceed limit of numberOfPlayers)
     
     var mafiaLimit: Int {
         numberOfPlayers - villager - healer - detective
@@ -45,49 +46,47 @@ struct MafiaRoles: View {
     }
     
     var body: some View {
-        NavigationView{
-            Form{
-                Section{
-                    Stepper("Number of players \(numberOfPlayers)", value: $numberOfPlayers, in: 0...20)
-                }
-                Section(header: Text("Select number of rolls")){
-                    Stepper("Mafia: \(mafia)", value: $mafia, in: 0...mafiaLimit)
-                    
-                    Stepper("Villager: \(villager)", value: $villager, in: 0...villagerLimit)
-                    
-                    Stepper("Healer: \(healer)", value: $healer, in: 0...healerLimit)
-                    
-                    Stepper("Detective: \(detective)", value: $detective, in: 0...detectiveLimit)
-                }
+        
+        Form{
+            Section{
+                Stepper("Number of players \(numberOfPlayers)", value: $numberOfPlayers, in: 0...20)
             }
-            .navigationTitle("Select number of players")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Submit") {
-                        showingNextScreen = true
-                    }
-
-                    
-                }
+            Section(header: Text("Select number of rolls")){
+                Stepper("Mafia: \(mafia)", value: $mafia, in: 0...mafiaLimit)
+                
+                Stepper("Villager: \(villager)", value: $villager, in: 0...villagerLimit)
+                
+                Stepper("Healer: \(healer)", value: $healer, in: 0...healerLimit)
+                
+                Stepper("Detective: \(detective)", value: $detective, in: 0...detectiveLimit)
             }
-        }
-        .alert(errorMessage, isPresented: $alertShowing) {
-            Button("Continue", role: .destructive) { }
-        }
-        if showingNextScreen && alertShowing == false {
-            MembersList(numberOfPlayers: numberOfPlayers)
-        } else {
-            MafiaRoles()
         }
         
+        .navigationTitle("Select number of players")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                
+                if passesValidation {
+                    NavigationLink("Submit",
+                                   destination: MembersList(numberOfPlayers: numberOfPlayers),
+                                   isActive: $showingNextScreen
+                    )
+                } else {
+                    Text("Submit")
+                        .foregroundColor(.gray)
+                    
+                }
+            }
+        }
     }
 }
 
 
 struct MafiaRoles_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView {
         MafiaRoles()
-            .navigationBarHidden(true)
-            .navigationTitle("")
+                .preferredColorScheme(.dark)
+        }
     }
 }
