@@ -38,6 +38,6 @@ struct MembersList_Previews: PreviewProvider {
 
 extension Int {
     func convertToArray() -> [Int] {
-        return [Int](0...self)
+        return [Int](0...self-1)
     }
 }
