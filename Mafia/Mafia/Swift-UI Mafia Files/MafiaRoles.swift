@@ -20,6 +20,10 @@ struct MafiaRoles: View {
     @State private var passesValidation = false
     @State private var showingNextScreen = false
     
+// new variable of type Game (see roles.swift) that will store the values for the current game,
+//not currently working because idk what attribute it needs to be accessed by other views while being able to mutate
+ // var currentGame: Game
+    
     var totalNumberOfPlayers: Int {
         villager + healer + detective + mafia
     }
@@ -63,13 +67,22 @@ struct MafiaRoles: View {
             }
         }
     }
-    
+    // Add each role value under "Game" Type (see the Game struct in roles.swift EX: if there were two villagers, and one mafia selected then --> currentGame.roles = ["Villager","Villager","Mafia"]
+//    func gameSetup() -> Game{
+//        var currentGame: Game
+//        while 0 < villager {
+//            currentGame.roles.append("Villager")
+//        }
+//        while 0 < mafia {
+//        }
+//        return currentGame
+//    }
     
     struct MafiaRoles_Previews: PreviewProvider {
         static var previews: some View {
             NavigationView {
                 MafiaRoles()
-                    .preferredColorScheme(.dark)
+                    .preferredColorScheme(.light)
             }
         }
     }

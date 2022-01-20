@@ -12,4 +12,7 @@ struct Mafia: Identifiable{
     var role: String
     var description: String
 }
-
+struct Game{
+    var roles: [String] = []
+    var playerNames: [String] = []
+}
