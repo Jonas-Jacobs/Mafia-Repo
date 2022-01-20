@@ -11,12 +11,8 @@ struct MafiaRoles: View {
     
     // @State roll variables
     
-    @State private var mafia = 0
-    @State private var villager = 0
-    @State private var healer = 0
-    @State private var detective = 0
-    @State var numberOfPlayers = 0
-    
+    var roles = Role.allCases
+    @StateObject var game = Game()
     @State private var passesValidation = false
     @State private var showingNextScreen = false
     
@@ -24,24 +20,29 @@ struct MafiaRoles: View {
 //not currently working because idk what attribute it needs to be accessed by other views while being able to mutate
  // var currentGame: Game
     
-    var totalNumberOfPlayers: Int {
-        villager + healer + detective + mafia
-    }
+//    var totalNumberOfPlayers: Int {
+//        villager + healer + detective + mafia
+//    }
     
     var body: some View {
         
-        Form{
-            Section{
-                Text("Total number of players: \(totalNumberOfPlayers)")
+        Form {
+            Section {
+                Text("Total number of players: \(game.players.count)")
             }
             Section(header: Text("Select number of rolls")){
-                Stepper("Mafia: \(mafia)", value: $mafia, in: 0...5)
-                
-                Stepper("Villager: \(villager)", value: $villager, in: 0...10)
-                
-                Stepper("Healer: \(healer)", value: $healer, in: 0...5)
-                
-                Stepper("Detective: \(detective)", value: $detective, in: 0...5)
+                ForEach(roles) { role in
+                    Stepper ("\(role.title): \(game.numberOfPlayers(for: role))") {
+                        game.players.append(GamePlayer(role: role))
+                    } onDecrement: {
+                        guard let index = game.players.firstIndex(where: { $0.role == role }) else {
+                            return
+                        }
+                        game.players.remove(at: index)
+                    }
+                    
+                }
+
             }
         }
         
@@ -50,34 +51,45 @@ struct MafiaRoles: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if passesValidation {
                     NavigationLink("Submit",
-                                   destination: MembersList(totalNumberOfPlayers: totalNumberOfPlayers),
+                                   destination: MembersList(totalNumberOfPlayers: game.players.count),
                                    isActive: $showingNextScreen
                     )
+
                 } else {
                     Text("Submit")
                         .foregroundColor(.gray)
                 }
             }
         }
-        .onChange(of: totalNumberOfPlayers) { newValue in
-            if totalNumberOfPlayers >= 3 && mafia >= 1 {
+        .onChange(of: game.players.count) { newValue in
+            if game.players.count >= 3 && game.numberOfPlayers(for: .mafia) >= 1 {
                 passesValidation = true
+
             } else {
                 passesValidation = false
             }
+
         }
+        
     }
-    // Add each role value under "Game" Type (see the Game struct in roles.swift EX: if there were two villagers, and one mafia selected then --> currentGame.roles = ["Villager","Villager","Mafia"]
+//    // Add each role value under "Game" Type (see the Game struct in roles.swift EX: if there were two villagers, and one mafia selected then --> currentGame.roles = ["Villager","Villager","Mafia"]
 //    func gameSetup() -> Game{
-//        var currentGame: Game
 //        while 0 < villager {
 //            currentGame.roles.append("Villager")
 //        }
 //        while 0 < mafia {
+//            currentGame.roles.append("Mafia")
 //        }
+//        while 0 < healer {
+//            currentGame.roles.append("Healer")
+//        }
+//        while 0 < detective {
+//            currentGame.roles.append("Detective")
+//        }
+//
 //        return currentGame
 //    }
-    
+//
     struct MafiaRoles_Previews: PreviewProvider {
         static var previews: some View {
             NavigationView {
