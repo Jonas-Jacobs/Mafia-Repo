@@ -51,6 +51,7 @@ struct GamePlayer: Identifiable {
     var id = UUID()
     var name: String = ""
     let role: Role
+    
 }
 
 // MARK: - Role Enum
@@ -69,6 +70,16 @@ enum Role: String, CaseIterable, Identifiable {
         return self.rawValue.capitalized
     }
     var description: String {
-        return ""
+        switch self
+        {
+        case .mafia:
+            return "hello"
+        case .villager:
+            return "ok"
+        case .detective:
+            return "hello hello"
+        case .healer:
+            return "hi"
+        }
     }
 }

@@ -34,7 +34,7 @@ struct MafiaMainScreen: View {
                             .frame(width: 200, height: 50, alignment: .center)
                             .cornerRadius(4)
                         NavigationLink {
-                            MafiaRoles()
+                            RolesInfoView()
                         } label: {
                             Text("Learn rolls")
                         }
