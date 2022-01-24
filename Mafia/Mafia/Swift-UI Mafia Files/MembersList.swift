@@ -14,15 +14,15 @@ struct Player: Identifiable {
 }
 
 struct MembersList: View {
-    @State private var players: [Player]
+    @StateObject var game: Game
     
-    init(totalNumberOfPlayers: Int) {
-        players = totalNumberOfPlayers.convertToArray().map({ _ in Player() })
-        
-    }
+//    init(totalNumberOfPlayers: Int) {
+//        players = totalNumberOfPlayers.convertToArray().map({ _ in Player() })
+//
+//    }
     
     var body: some View {
-        List($players, id: \.id) { player in
+        List($game.players, id: \.id) { player in
             Section{
                 TextField("Player enter your name", text: player.name)
             }
@@ -32,12 +32,9 @@ struct MembersList: View {
 
 struct MembersList_Previews: PreviewProvider {
     static var previews: some View {
-        MembersList(totalNumberOfPlayers: 5)
+        MembersList(game: Game.dummyData)
+        
     }
 }
 
-extension Int {
-    func convertToArray() -> [Int] {
-        return [Int](0...self-1)
-    }
-}
+

@@ -30,13 +30,25 @@ class Game: ObservableObject{
         }.count
     }
     
+    
+    static var dummyData: Game {
+        var game = Game()
+        game.players = [
+            GamePlayer(role: .mafia),
+            GamePlayer(role: .mafia),
+            GamePlayer(role: .mafia)
+        ]
+        return game
+    }
+    
 }
 
 // MARK: - Game Player
 
 /// An object to hold the values of a palyer in the game.
 /// This is used by the `Game` object.
-struct GamePlayer {
+struct GamePlayer: Identifiable {
+    var id = UUID()
     var name: String = ""
     let role: Role
 }

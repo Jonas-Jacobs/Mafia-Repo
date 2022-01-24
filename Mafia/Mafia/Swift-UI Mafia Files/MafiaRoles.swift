@@ -51,7 +51,7 @@ struct MafiaRoles: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if passesValidation {
                     NavigationLink("Submit",
-                                   destination: MembersList(totalNumberOfPlayers: game.players.count),
+                                   destination: MembersList(game: game),
                                    isActive: $showingNextScreen
                     )
 
