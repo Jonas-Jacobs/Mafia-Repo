@@ -22,6 +22,7 @@
 		B94CCD32278C954300FA20A4 /* MafiaMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94CCD30278C954300FA20A4 /* MafiaMainScreen.swift */; };
 		B94CCD33278C954300FA20A4 /* MafiaRoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94CCD31278C954300FA20A4 /* MafiaRoles.swift */; };
 		B975271B2788E94300C27117 /* MembersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975271A2788E94300C27117 /* MembersList.swift */; };
+		B9A1C7C1279F07FB00A98670 /* MemberDetailRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A1C7C0279F07FB00A98670 /* MemberDetailRoleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		B94CCD30278C954300FA20A4 /* MafiaMainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MafiaMainScreen.swift; sourceTree = "<group>"; };
 		B94CCD31278C954300FA20A4 /* MafiaRoles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MafiaRoles.swift; sourceTree = "<group>"; };
 		B975271A2788E94300C27117 /* MembersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersList.swift; sourceTree = "<group>"; };
+		B9A1C7C0279F07FB00A98670 /* MemberDetailRoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailRoleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				B94CCD31278C954300FA20A4 /* MafiaRoles.swift */,
 				B975271A2788E94300C27117 /* MembersList.swift */,
 				2B9BB0CD279879CE00AB62A8 /* MemberRoleView.swift */,
+				B9A1C7C0279F07FB00A98670 /* MemberDetailRoleView.swift */,
 			);
 			path = "Swift-UI Mafia Files";
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				B927E5E22787450C003094AF /* SceneDelegate.swift in Sources */,
 				2BC32389278C888900D0B15E /* Roles.swift in Sources */,
 				2BC32387278C85AB00D0B15E /* RolesInfoView.swift in Sources */,
+				B9A1C7C1279F07FB00A98670 /* MemberDetailRoleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

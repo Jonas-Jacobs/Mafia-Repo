@@ -20,7 +20,7 @@ struct Mafia: Identifiable{
 
 /// An object to hold all the data needed to make the game work.
 /// This should be updated as you go along though the setup process.
-class Game: ObservableObject{
+class Game: ObservableObject {
     
     @Published var players = [GamePlayer]()
     

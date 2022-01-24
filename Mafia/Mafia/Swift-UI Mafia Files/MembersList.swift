@@ -14,6 +14,7 @@ struct Player: Identifiable {
 }
 
 struct MembersList: View {
+    @State private var isTextFieldFocused = false
     @StateObject var game: Game
     
 //    init(totalNumberOfPlayers: Int) {
@@ -24,9 +25,36 @@ struct MembersList: View {
     var body: some View {
         List($game.players, id: \.id) { player in
             Section{
-                TextField("Player enter your name", text: player.name)
+                TextField("Player enter your name", text: player.name, onEditingChanged: { editingChanged in
+                    isTextFieldFocused = editingChanged
+                })
+                .foregroundColor(isTextFieldFocused ? Color.black  : Color.clear)
+                
             }
         }
+//        .onChange(of: game.players.count) { useLessVariable in
+//            if game.players /= "" {
+//
+//            }
+//
+//        }
+//        .toolbar {
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                if  {
+//                    NavigationLink {
+//                        <#code#>
+//                    } label: {
+//                        "Submit"
+//                    }
+//
+//                } else {
+//                    Text("Submit")
+//                        .font(.gray)
+//                }
+//
+//            }
+//        }
+        
     }
 }
 
