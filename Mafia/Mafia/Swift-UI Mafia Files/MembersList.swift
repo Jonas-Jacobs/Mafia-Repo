@@ -16,44 +16,36 @@ struct Player: Identifiable {
 struct MembersList: View {
     @State private var isTextFieldFocused = false
     @StateObject var game: Game
-    
-//    init(totalNumberOfPlayers: Int) {
-//        players = totalNumberOfPlayers.convertToArray().map({ _ in Player() })
-//
-//    }
+    @State var showingMemberRoleView = false
+    @State var passesValidation = false
     
     var body: some View {
         List($game.players, id: \.id) { player in
             Section{
-                TextField("Player enter your name", text: player.name, onEditingChanged: { editingChanged in
+                TextField("Enter your name", text: player.name, onEditingChanged: { editingChanged in
                     isTextFieldFocused = editingChanged
                 })
-                .foregroundColor(isTextFieldFocused ? Color.black  : Color.clear)
-                
             }
         }
-//        .onChange(of: game.players.count) { useLessVariable in
-//            if game.players /= "" {
-//
-//            }
-//
-//        }
-//        .toolbar {
-//            ToolbarItem(placement: .navigationBarTrailing) {
-//                if  {
-//                    NavigationLink {
-//                        <#code#>
-//                    } label: {
-//                        "Submit"
-//                    }
-//
-//                } else {
-//                    Text("Submit")
-//                        .font(.gray)
-//                }
-//
-//            }
-//        }
+        .onChange(of: game.players) { unusedVariable in
+            if game.players.count > 0 {
+                passesValidation = true
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                if passesValidation == true {
+                    NavigationLink ("Submit",
+                                    destination: MemberRoleView(game: game),
+                                    isActive: $showingMemberRoleView  )
+
+                } else {
+                    Text("Submit")
+                        .foregroundColor(.gray)
+                }
+
+            }
+        }
         
     }
 }

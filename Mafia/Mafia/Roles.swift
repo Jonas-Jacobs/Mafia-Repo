@@ -47,7 +47,7 @@ class Game: ObservableObject {
 
 /// An object to hold the values of a palyer in the game.
 /// This is used by the `Game` object.
-struct GamePlayer: Identifiable {
+struct GamePlayer: Identifiable, Equatable {
     var id = UUID()
     var name: String = ""
     let role: Role

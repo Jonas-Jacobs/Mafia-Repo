@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct MemberRoleView: View {
+    @StateObject var game: Game
+    @State var showingNextScreen = false
+    
+    
     var body: some View {
-        Text("your mom is awesome!")
+        List($game.players, id: \.id) { player in
+//            Text("\(game.$players) tap to view role")
+        }
+    }
+    func toggleShowingScreen() {
+        showingNextScreen.toggle()
     }
 }
 
 struct MemberRoleView_Previews: PreviewProvider {
     static var previews: some View {
-        MemberRoleView()
+        MemberRoleView(game: Game.dummyData)
     }
 }
