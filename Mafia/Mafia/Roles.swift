@@ -73,13 +73,13 @@ enum Role: String, CaseIterable, Identifiable {
         switch self
         {
         case .mafia:
-            return "hello"
+            return "Mafia members vote on one player each night to attempt to kill."
         case .villager:
-            return "ok"
+            return "The Villager has no special abilites."
         case .detective:
-            return "hello hello"
+            return "The detectives vote on one player each night to investigate who the player sides with."
         case .healer:
-            return "hi"
+            return "The doctors vote on one player each night to save in case they die that night."
         }
     }
 }
