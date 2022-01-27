@@ -7,17 +7,11 @@
 
 import SwiftUI
 
-struct Player: Identifiable {
-    var id = UUID()
-    var name = "Enter your name"
-    var role = "String"
-}
-
 struct MembersList: View {
     @State private var isTextFieldFocused = false
     @StateObject var game: Game
     @State var showingMemberRoleView = false
-    @State var passesValidation = false
+    @State var passesValidation = true
     
     var body: some View {
         List($game.players, id: \.id) { player in
@@ -38,22 +32,18 @@ struct MembersList: View {
                     NavigationLink ("Submit",
                                     destination: MemberRoleView(game: game),
                                     isActive: $showingMemberRoleView  )
-
                 } else {
                     Text("Submit")
                         .foregroundColor(.gray)
                 }
-
             }
         }
-        
     }
 }
 
 struct MembersList_Previews: PreviewProvider {
     static var previews: some View {
         MembersList(game: Game.dummyData)
-        
     }
 }
 
