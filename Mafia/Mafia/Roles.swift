@@ -47,11 +47,20 @@ class Game: ObservableObject {
 
 /// An object to hold the values of a palyer in the game.
 /// This is used by the `Game` object.
-struct GamePlayer: Identifiable, Equatable {
-    var id = UUID()
-    var name: String = ""
+class GamePlayer: Identifiable, Equatable {
+    @Published var id = UUID()
+    @Published var name: String = ""
     let role: Role
     
+    init(role: Role) {
+        self.role = role
+    }
+
+    // MARK: - Equatable Methods
+    static func == (lhs: GamePlayer, rhs: GamePlayer) -> Bool {
+        //TODO: FIX THIS LATER
+        return true
+    }
 }
 
 // MARK: - Role Enum
@@ -62,6 +71,7 @@ enum Role: String, CaseIterable, Identifiable {
     case villager
     case detective
     case healer
+    case none
     
     var id: String {
         title
@@ -80,6 +90,8 @@ enum Role: String, CaseIterable, Identifiable {
             return "hello hello"
         case .healer:
             return "hi"
+        case .none:
+            return "empty"
         }
     }
 }

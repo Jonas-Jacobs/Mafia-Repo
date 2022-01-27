@@ -13,14 +13,31 @@ struct MemberRoleView: View {
     
     
     var body: some View {
-        List($game.players, id: \.id) { player in
-//            Text("\(game.$players) tap to view role")
+        List(game.players) { player in
+            ButtonRow(player: player)
         }
     }
     func toggleShowingScreen() {
         showingNextScreen.toggle()
     }
 }
+
+struct ButtonRow: View {
+    var player: GamePlayer
+    
+    var body: some View {
+        NavigationLink(destination: MemberDetailRoleView()) {
+            HStack {
+                Button(action: {
+                    // add to an array
+                }) {
+                    Text(player.name)
+                }.foregroundColor(.black)
+            }
+        }
+    }
+}
+
 
 struct MemberRoleView_Previews: PreviewProvider {
     static var previews: some View {
