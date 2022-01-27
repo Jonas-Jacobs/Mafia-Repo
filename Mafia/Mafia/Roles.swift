@@ -89,7 +89,7 @@ enum Role: String, CaseIterable, Identifiable {
         case .detective:
             return "hello hello"
         case .healer:
-            return "hi"
+            return "The doctors vote on one player each night to save in case they die that night."
         case .none:
             return "empty"
         }
