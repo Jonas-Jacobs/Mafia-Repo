@@ -24,10 +24,10 @@ struct ButtonRow: View {
     var player: GamePlayer
     
     var body: some View {
-        NavigationLink(destination: MemberDetailRoleView()) {
+        NavigationLink(destination: MemberDetailRoleView(player: player)) {
             HStack {
                 Button(action: {
-                    // add to an array
+                    
                 }) {
                     Text(player.name)
                 }.foregroundColor(.black)

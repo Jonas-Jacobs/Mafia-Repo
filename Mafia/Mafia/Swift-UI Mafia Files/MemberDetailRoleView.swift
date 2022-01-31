@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct MemberDetailRoleView: View {
+    @StateObject var player: GamePlayer
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(player.name)
+        Text(player.role.title)
+        Text(player.role.description)
     }
 }
 
 struct MemberDetailRoleView_Previews: PreviewProvider {
     static var previews: some View {
-        MemberDetailRoleView()
+        MemberDetailRoleView(player: Game.dummyData.players[0])
     }
 }

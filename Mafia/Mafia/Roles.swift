@@ -32,7 +32,7 @@ class Game: ObservableObject {
     
     
     static var dummyData: Game {
-        var game = Game()
+        let game = Game()
         game.players = [
             GamePlayer(role: .mafia),
             GamePlayer(role: .mafia),
@@ -47,7 +47,7 @@ class Game: ObservableObject {
 
 /// An object to hold the values of a palyer in the game.
 /// This is used by the `Game` object.
-class GamePlayer: Identifiable, Equatable {
+class GamePlayer: Identifiable, Equatable, ObservableObject {
     @Published var id = UUID()
     @Published var name: String = ""
     let role: Role
@@ -71,7 +71,7 @@ enum Role: String, CaseIterable, Identifiable {
     case villager
     case detective
     case healer
-    case none
+    
     
     var id: String {
         title
@@ -90,8 +90,7 @@ enum Role: String, CaseIterable, Identifiable {
             return "The detectives vote on one player each night to investigate who the player sides with."
         case .healer:
             return "The doctors vote on one player each night to save in case they die that night."
-        case .none:
-            return "empty"
+        
         }
     }
 }
