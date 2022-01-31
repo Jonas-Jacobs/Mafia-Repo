@@ -9,17 +9,15 @@ import SwiftUI
 
 struct MemberRoleView: View {
     @StateObject var game: Game
-    @State var showingNextScreen = false
-    
     
     var body: some View {
         List(game.players) { player in
             ButtonRow(player: player)
         }
     }
-    func toggleShowingScreen() {
-        showingNextScreen.toggle()
-    }
+//    func shuffle() {
+//        player.role.shuffled()
+//    }
 }
 
 struct ButtonRow: View {
@@ -37,7 +35,6 @@ struct ButtonRow: View {
         }
     }
 }
-
 
 struct MemberRoleView_Previews: PreviewProvider {
     static var previews: some View {
