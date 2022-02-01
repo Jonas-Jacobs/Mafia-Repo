@@ -18,6 +18,7 @@ struct MafiaRoles: View {
     
     var body: some View {
         
+    
         Form {
             Section {
                 Text("Total number of players: \(game.players.count)")

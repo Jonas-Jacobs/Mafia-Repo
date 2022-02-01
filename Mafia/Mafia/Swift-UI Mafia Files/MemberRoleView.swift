@@ -15,9 +15,6 @@ struct MemberRoleView: View {
             ButtonRow(player: player)
         }
     }
-//    func shuffle() {
-//        player.role.shuffled()
-//    }
 }
 
 struct ButtonRow: View {
