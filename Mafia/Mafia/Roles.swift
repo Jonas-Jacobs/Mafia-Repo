@@ -72,7 +72,6 @@ enum Role: String, CaseIterable, Identifiable {
     case detective
     case healer
     
-    
     var id: String {
         title
     }
@@ -94,3 +93,35 @@ enum Role: String, CaseIterable, Identifiable {
         }
     }
 }
+
+    
+
+//    init?(id : Int) {
+//        switch id {
+//        case 1:
+//            self = .mafia
+//        case 2:
+//            self = .villager
+//        case 3:
+//            self = .detective
+//        case 4:
+//            self = .healer
+//        default:
+//            return nil
+//        }
+//    }
+//}
+
+//extension Role {
+//    static var allValues: [Role] {
+//        var allValues: [Role] = []
+//        switch (Role.mafia) {
+//        case .mafia: allValues.append(.mafia); fallthrough
+//        case .villager: allValues.append(.villager); fallthrough
+//        case .detective: allValues.append(.detective); fallthrough
+//        case .healer: allValues.append(.healer)
+//        }
+//        return allValues
+//    }
+//}
+
