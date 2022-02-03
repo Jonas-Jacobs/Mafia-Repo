@@ -28,7 +28,6 @@ struct MafiaMainScreen: View {
                         }
                         .foregroundColor(Color.black)
                     }
-                    
                     ZStack{
                         Color(red: 180/255, green: 27/255, blue: 30/255)
                             .frame(width: 200, height: 50, alignment: .center)

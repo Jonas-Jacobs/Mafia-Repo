@@ -17,8 +17,6 @@ struct MafiaRoles: View {
     @State private var showingNextScreen = false
     
     var body: some View {
-        
-    
         Form {
             Section {
                 Text("Total number of players: \(game.players.count)")
@@ -33,9 +31,7 @@ struct MafiaRoles: View {
                         }
                         game.players.remove(at: index)
                     }
-                    
                 }
-
             }
         }
         
@@ -47,7 +43,6 @@ struct MafiaRoles: View {
                                    destination: MembersList(game: game),
                                    isActive: $showingNextScreen
                     )
-
                 } else {
                     Text("Submit")
                         .foregroundColor(.gray)
@@ -57,13 +52,10 @@ struct MafiaRoles: View {
         .onChange(of: game.players.count) { newValue in
             if game.players.count >= 3 && game.numberOfPlayers(for: .mafia) >= 1 {
                 passesValidation = true
-
             } else {
                 passesValidation = false
             }
-
         }
-        
     }
     
     struct MafiaRoles_Previews: PreviewProvider {
