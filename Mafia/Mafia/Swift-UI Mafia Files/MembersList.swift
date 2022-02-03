@@ -12,24 +12,20 @@ struct MembersList: View {
     @StateObject var game: Game
     @State var showingMemberRoleView = false
     @State var passesValidation = true
-
+    
     
     var body: some View {
         List($game.players, id: \.id) { player in
             Section{
                 TextField("Enter your name", text: player.name, onEditingChanged: { editingChanged in
                     isTextFieldFocused = editingChanged
+                    checkingForNames()
                 })
             }
         }
         .onAppear(perform: {
             game.players.shuffle()
         })
-        .onChange(of: game.players) { unusedVariable in
-            if game.players.count > 0 {
-                passesValidation = true
-            }
-        }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if passesValidation == true {
@@ -44,6 +40,17 @@ struct MembersList: View {
         }
     }
     
+    func checkingForNames() {
+        let players = game.players
+        for player in players {
+            if player.name.isEmpty {
+                passesValidation = false
+                return
+            } else {
+                passesValidation = true
+            }
+        }
+    }
 }
 
 struct MembersList_Previews: PreviewProvider {
