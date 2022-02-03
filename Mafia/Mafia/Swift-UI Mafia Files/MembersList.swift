@@ -12,6 +12,7 @@ struct MembersList: View {
     @StateObject var game: Game
     @State var showingMemberRoleView = false
     @State var passesValidation = true
+
     
     var body: some View {
         List($game.players, id: \.id) { player in
@@ -21,6 +22,9 @@ struct MembersList: View {
                 })
             }
         }
+        .onAppear(perform: {
+            game.players.shuffle()
+        })
         .onChange(of: game.players) { unusedVariable in
             if game.players.count > 0 {
                 passesValidation = true
@@ -39,6 +43,7 @@ struct MembersList: View {
             }
         }
     }
+    
 }
 
 struct MembersList_Previews: PreviewProvider {

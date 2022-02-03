@@ -9,10 +9,14 @@ import SwiftUI
 
 struct MemberDetailRoleView: View {
     @StateObject var player: GamePlayer
+//    var roleList: 
+    
     var body: some View {
+        VStack{
         Text(player.name)
         Text(player.role.title)
         Text(player.role.description)
+        }
     }
 }
 
