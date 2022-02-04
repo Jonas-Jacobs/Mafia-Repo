@@ -8,10 +8,21 @@
 import UIKit
 import SwiftUI
 
+class MafiaHostingViewController <Content>: UIHostingController<AnyView> where Content : View {
+
+  public init(shouldShowNavigationBar: Bool, rootView: Content) {
+      super.init(rootView: AnyView(rootView.navigationBarHidden(!shouldShowNavigationBar)))
+  }
+
+  @objc required dynamic init?(coder aDecoder: NSCoder) {
+      fatalError("init(coder:) has not been implemented")
+  }
+}
+
 //Loading Screen View Controller
 class ViewController: UIViewController {
     
-    let contentView = UIHostingController(rootView: MafiaMainScreen())
+    let contentView = MafiaHostingViewController(shouldShowNavigationBar: false, rootView: MafiaMainScreen())
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -13,9 +13,9 @@ struct MemberDetailRoleView: View {
     
     var body: some View {
         VStack{
-        Text(player.name)
-        Text(player.role.title)
-        Text(player.role.description)
+            Text(player.name)
+            Text(player.role.title)
+            Text(player.role.description)
         }
     }
 }
