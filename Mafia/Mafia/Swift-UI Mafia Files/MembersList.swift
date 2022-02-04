@@ -11,7 +11,7 @@ struct MembersList: View {
     @State private var isTextFieldFocused = false
     @StateObject var game: Game
     @State var showingMemberRoleView = false
-    @State var passesValidation = true
+    @State var passesValidation = false
     
     
     var body: some View {

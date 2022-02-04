@@ -7,6 +7,7 @@
 
 import Foundation
 import CloudKit
+import UIKit
 
 // MARK: - Mafia
 
@@ -89,39 +90,19 @@ enum Role: String, CaseIterable, Identifiable {
             return "The detectives vote on one player each night to investigate who the player sides with."
         case .healer:
             return "The doctors vote on one player each night to save in case they die that night."
-        
         }
     }
+//    var icon: UIImage {
+//        switch self
+//        {
+//        case .mafia:
+//            return UIImage(systemName: "sun.min") ?? UIImage()
+//        case .villager:
+//            return UIImage(systemName: "person.fill") ?? UIImage()
+//        case .detective:
+//            return UIImage(systemName: "magnifyingglass") ?? UIImage()
+//        case .healer:
+//            return UIImage(systemName: "bandage.fill") ?? UIImage()
+//        }
+//    }
 }
-
-    
-
-//    init?(id : Int) {
-//        switch id {
-//        case 1:
-//            self = .mafia
-//        case 2:
-//            self = .villager
-//        case 3:
-//            self = .detective
-//        case 4:
-//            self = .healer
-//        default:
-//            return nil
-//        }
-//    }
-//}
-
-//extension Role {
-//    static var allValues: [Role] {
-//        var allValues: [Role] = []
-//        switch (Role.mafia) {
-//        case .mafia: allValues.append(.mafia); fallthrough
-//        case .villager: allValues.append(.villager); fallthrough
-//        case .detective: allValues.append(.detective); fallthrough
-//        case .healer: allValues.append(.healer)
-//        }
-//        return allValues
-//    }
-//}
-

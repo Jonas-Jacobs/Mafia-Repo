@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MemberDetailRoleView: View {
     @StateObject var player: GamePlayer
+    var icons = Role.allCases
 //    var roleList: 
     
     var body: some View {
