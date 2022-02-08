@@ -12,8 +12,6 @@
 		2BC32389278C888900D0B15E /* Roles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC32388278C888900D0B15E /* Roles.swift */; };
 		B927E5E02787450C003094AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E5DF2787450C003094AF /* AppDelegate.swift */; };
 		B927E5E22787450C003094AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E5E12787450C003094AF /* SceneDelegate.swift */; };
-		B927E5E42787450C003094AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E5E32787450C003094AF /* ViewController.swift */; };
-		B927E5E72787450C003094AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B927E5E52787450C003094AF /* Main.storyboard */; };
 		B927E5E92787450D003094AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B927E5E82787450D003094AF /* Assets.xcassets */; };
 		B927E5EC2787450D003094AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B927E5EA2787450D003094AF /* LaunchScreen.storyboard */; };
 		B927E5F72787450D003094AF /* MafiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E5F62787450D003094AF /* MafiaTests.swift */; };
@@ -49,8 +47,6 @@
 		B927E5DC2787450C003094AF /* Mafia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mafia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B927E5DF2787450C003094AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B927E5E12787450C003094AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B927E5E32787450C003094AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B927E5E62787450C003094AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B927E5E82787450D003094AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B927E5EB2787450D003094AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B927E5ED2787450D003094AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,8 +111,6 @@
 			children = (
 				B927E5DF2787450C003094AF /* AppDelegate.swift */,
 				B927E5E12787450C003094AF /* SceneDelegate.swift */,
-				B927E5E32787450C003094AF /* ViewController.swift */,
-				B927E5E52787450C003094AF /* Main.storyboard */,
 				B97527172788A30100C27117 /* Swift-UI Mafia Files */,
 				B927E5E82787450D003094AF /* Assets.xcassets */,
 				B927E5EA2787450D003094AF /* LaunchScreen.storyboard */,
@@ -262,7 +256,6 @@
 			files = (
 				B927E5EC2787450D003094AF /* LaunchScreen.storyboard in Resources */,
 				B927E5E92787450D003094AF /* Assets.xcassets in Resources */,
-				B927E5E72787450C003094AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +281,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94CCD33278C954300FA20A4 /* MafiaRoles.swift in Sources */,
-				B927E5E42787450C003094AF /* ViewController.swift in Sources */,
 				2B9BB0CE279879CE00AB62A8 /* MemberRoleView.swift in Sources */,
 				B975271B2788E94300C27117 /* MembersList.swift in Sources */,
 				B927E5E02787450C003094AF /* AppDelegate.swift in Sources */,
@@ -333,14 +325,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B927E5E52787450C003094AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B927E5E62787450C003094AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B927E5EA2787450D003094AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -480,7 +464,6 @@
 				INFOPLIST_FILE = Mafia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -509,7 +492,6 @@
 				INFOPLIST_FILE = Mafia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
