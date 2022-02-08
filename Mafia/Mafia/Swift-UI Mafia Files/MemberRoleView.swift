@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MemberRoleView: View {
     @StateObject var game: Game
-    
     var body: some View {
         List(game.players) { player in
             ButtonRow(player: player)
