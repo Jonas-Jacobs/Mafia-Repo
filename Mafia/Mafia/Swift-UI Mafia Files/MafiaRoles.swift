@@ -15,6 +15,7 @@ struct MafiaRoles: View {
     @StateObject var game = Game()
     @State private var passesValidation = false
     @State private var showingNextScreen = false
+    @StateObject var player: GamePlayer
     
     var body: some View {
         Form {
@@ -23,6 +24,8 @@ struct MafiaRoles: View {
             }
             Section(header: Text("Select number of rolls")){
                 ForEach(roles) { role in
+                    HStack{
+                        Image(systemName: role.icon)
                     Stepper ("\(role.title): \(game.numberOfPlayers(for: role))") {
                         game.players.append(GamePlayer(name: "", role: role))
                     } onDecrement: {
@@ -30,6 +33,7 @@ struct MafiaRoles: View {
                             return
                         }
                         game.players.remove(at: index)
+                        }
                     }
                 }
             }
@@ -61,7 +65,7 @@ struct MafiaRoles: View {
     struct MafiaRoles_Previews: PreviewProvider {
         static var previews: some View {
             NavigationView {
-                MafiaRoles()
+                MafiaRoles( player: Game.dummyData.players[0])
                     .preferredColorScheme(.light)
             }
         }

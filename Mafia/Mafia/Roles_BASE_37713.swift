@@ -35,9 +35,9 @@ class Game: ObservableObject {
     static var dummyData: Game {
         let game = Game()
         game.players = [
-            GamePlayer(name: "hello", role: .mafia),
-            GamePlayer(name: "hello", role: .mafia),
-            GamePlayer(name: "hello", role: .mafia)
+            GamePlayer(role: .mafia),
+            GamePlayer(role: .mafia),
+            GamePlayer(role: .mafia)
         ]
         return game
     }
@@ -53,9 +53,8 @@ class GamePlayer: Identifiable, Equatable, ObservableObject {
     @Published var name: String = ""
     let role: Role
     
-    init(name: String, role: Role) {
+    init(role: Role) {
         self.role = role
-        self.name = name
     }
 
     // MARK: - Equatable Methods
@@ -93,17 +92,17 @@ enum Role: String, CaseIterable, Identifiable {
             return "The doctors vote on one player each night to save in case they die that night."
         }
     }
-    
-    var icon: String {
-        switch self {
-        case .mafia:
-            return "person.fill"
-        case .villager:
-            return "person.3.fill"
-        case .detective:
-            return "magnifyingglass"
-        case .healer:
-            return "bandage.fill"
-        }
-    }
+//    var icon: UIImage {
+//        switch self
+//        {
+//        case .mafia:
+//            return UIImage(systemName: "sun.min") ?? UIImage()
+//        case .villager:
+//            return UIImage(systemName: "person.fill") ?? UIImage()
+//        case .detective:
+//            return UIImage(systemName: "magnifyingglass") ?? UIImage()
+//        case .healer:
+//            return UIImage(systemName: "bandage.fill") ?? UIImage()
+//        }
+//    }
 }

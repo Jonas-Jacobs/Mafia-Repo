@@ -32,7 +32,7 @@ struct MafiaMainScreen: View {
                             .frame(width: 200, height: 50, alignment: .center)
                             .cornerRadius(4)
                         NavigationLink {
-                            MafiaRoles()
+                            MafiaRoles(player: Game.dummyData.players[0])
                         } label: {
                             Text("Create new game")
                         }

@@ -36,8 +36,8 @@ class Game: ObservableObject {
         let game = Game()
         game.players = [
             GamePlayer(name: "hello", role: .mafia),
-            GamePlayer(name: "hello", role: .mafia),
-            GamePlayer(name: "hello", role: .mafia)
+            GamePlayer(name: "hello2", role: .detective),
+            GamePlayer(name: "hello3", role: .healer)
         ]
         return game
     }
@@ -93,17 +93,17 @@ enum Role: String, CaseIterable, Identifiable {
             return "The doctors vote on one player each night to save in case they die that night."
         }
     }
-    
-    var icon: String {
-        switch self {
-        case .mafia:
-            return "person.fill"
-        case .villager:
-            return "person.3.fill"
-        case .detective:
-            return "magnifyingglass"
-        case .healer:
-            return "bandage.fill"
-        }
-    }
+//    var icon: UIImage {
+//        switch self
+//        {
+//        case .mafia:
+//            return UIImage(systemName: "sun.min") ?? UIImage()
+//        case .villager:
+//            return UIImage(systemName: "person.fill") ?? UIImage()
+//        case .detective:
+//            return UIImage(systemName: "magnifyingglass") ?? UIImage()
+//        case .healer:
+//            return UIImage(systemName: "bandage.fill") ?? UIImage()
+//        }
+//    }
 }

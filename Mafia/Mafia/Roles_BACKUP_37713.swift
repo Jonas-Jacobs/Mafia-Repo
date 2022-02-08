@@ -36,8 +36,13 @@ class Game: ObservableObject {
         let game = Game()
         game.players = [
             GamePlayer(name: "hello", role: .mafia),
+<<<<<<< Updated upstream
+            GamePlayer(name: "hello2", role: .detective),
+            GamePlayer(name: "hello3", role: .healer)
+=======
             GamePlayer(name: "hello", role: .mafia),
             GamePlayer(name: "hello", role: .mafia)
+>>>>>>> Stashed changes
         ]
         return game
     }

@@ -9,13 +9,14 @@ import SwiftUI
 
 struct MemberDetailRoleView: View {
     @StateObject var player: GamePlayer
-    var icons = Role.allCases
-//    var roleList: 
-    
     var body: some View {
-        VStack{
             Text(player.name)
+                .font(.title)
+        VStack{
+            HStack{
+            Image(systemName: player.role.icon)
             Text(player.role.title)
+            }
             Text(player.role.description)
         }
     }
