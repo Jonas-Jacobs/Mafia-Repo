@@ -35,9 +35,9 @@ class Game: ObservableObject {
     static var dummyData: Game {
         let game = Game()
         game.players = [
-            GamePlayer(role: .mafia),
-            GamePlayer(role: .mafia),
-            GamePlayer(role: .mafia)
+            GamePlayer(name: "hello", role: .mafia),
+            GamePlayer(name: "hello2", role: .detective),
+            GamePlayer(name: "hello3", role: .healer)
         ]
         return game
     }
@@ -53,8 +53,9 @@ class GamePlayer: Identifiable, Equatable, ObservableObject {
     @Published var name: String = ""
     let role: Role
     
-    init(role: Role) {
+    init(name: String, role: Role) {
         self.role = role
+        self.name = name
     }
 
     // MARK: - Equatable Methods

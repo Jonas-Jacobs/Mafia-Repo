@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B282D5927B2BF0400B2094F /* PlayerActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B282D5827B2BF0400B2094F /* PlayerActionView.swift */; };
 		2B9BB0CE279879CE00AB62A8 /* MemberRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BB0CD279879CE00AB62A8 /* MemberRoleView.swift */; };
 		2BC32387278C85AB00D0B15E /* RolesInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC32386278C85AB00D0B15E /* RolesInfoView.swift */; };
 		2BC32389278C888900D0B15E /* Roles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC32388278C888900D0B15E /* Roles.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B282D5827B2BF0400B2094F /* PlayerActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerActionView.swift; sourceTree = "<group>"; };
 		2B9BB0CD279879CE00AB62A8 /* MemberRoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRoleView.swift; sourceTree = "<group>"; };
 		2BC32386278C85AB00D0B15E /* RolesInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolesInfoView.swift; sourceTree = "<group>"; };
 		2BC32388278C888900D0B15E /* Roles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roles.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				B975271A2788E94300C27117 /* MembersList.swift */,
 				2B9BB0CD279879CE00AB62A8 /* MemberRoleView.swift */,
 				B9A1C7C0279F07FB00A98670 /* MemberDetailRoleView.swift */,
+				2B282D5827B2BF0400B2094F /* PlayerActionView.swift */,
 			);
 			path = "Swift-UI Mafia Files";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				B975271B2788E94300C27117 /* MembersList.swift in Sources */,
 				B927E5E02787450C003094AF /* AppDelegate.swift in Sources */,
 				B94CCD32278C954300FA20A4 /* MafiaMainScreen.swift in Sources */,
+				2B282D5927B2BF0400B2094F /* PlayerActionView.swift in Sources */,
 				B927E5E22787450C003094AF /* SceneDelegate.swift in Sources */,
 				2BC32389278C888900D0B15E /* Roles.swift in Sources */,
 				2BC32387278C85AB00D0B15E /* RolesInfoView.swift in Sources */,

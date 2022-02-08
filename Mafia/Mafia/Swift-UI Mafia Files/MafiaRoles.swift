@@ -24,7 +24,7 @@ struct MafiaRoles: View {
             Section(header: Text("Select number of rolls")){
                 ForEach(roles) { role in
                     Stepper ("\(role.title): \(game.numberOfPlayers(for: role))") {
-                        game.players.append(GamePlayer(role: role))
+                        game.players.append(GamePlayer(name: "", role: role))
                     } onDecrement: {
                         guard let index = game.players.firstIndex(where: { $0.role == role }) else {
                             return
