@@ -17,7 +17,7 @@ struct PlayerActionView: View {
             Section(header: Text("action")){
                 
                 List(game.players){ player in
-                    PlayerList(player: player)
+                    PlayerList(game: game, playerSelected: player)
                     
                 }
             }
@@ -26,12 +26,22 @@ struct PlayerActionView: View {
 }
 
 struct PlayerList: View {
-    var player: GamePlayer
+    var game: Game
+    var playerSelected: GamePlayer
     var body: some View {
         VStack{
-            Text("\(player.name)")
+            NavigationLink("hello",destination: TransitionView(player: doAction(game: game, selectedPlayer: playerSelected, currentPlayer: game.players[1])))
+            
+            
+            
         }
     }
+}
+func doAction(game: Game, selectedPlayer: GamePlayer, currentPlayer: GamePlayer) -> GamePlayer {
+    if currentPlayer.role == .mafia {
+        selectedPlayer.isBeingKilled = true
+    }
+    return selectedPlayer
 }
 
 struct PlayerActionView_Previews: PreviewProvider {
