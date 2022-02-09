@@ -15,6 +15,7 @@ struct MemberDetailRoleView: View {
         VStack{
             HStack{
             Image(systemName: player.role.icon)
+                    .foregroundColor(Color(player.role.value))
             Text(player.role.title)
             }
             Text(player.role.description)

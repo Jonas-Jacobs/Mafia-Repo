@@ -26,6 +26,7 @@ struct MafiaRoles: View {
                 ForEach(roles) { role in
                     HStack{
                         Image(systemName: role.icon)
+                            .foregroundColor(Color(role.value))
                     Stepper ("\(role.title): \(game.numberOfPlayers(for: role))") {
                         game.players.append(GamePlayer(name: "", role: role))
                     } onDecrement: {

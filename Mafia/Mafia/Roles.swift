@@ -107,3 +107,20 @@ enum Role: String, CaseIterable, Identifiable {
         }
     }
 }
+
+extension Role {
+    var value: UIColor {
+        get {
+            switch self {
+            case .mafia:
+                return UIColor.red
+            case .villager:
+                return UIColor.black
+            case .detective:
+                return UIColor.black
+            case .healer:
+                return UIColor.black
+            }
+        }
+    }
+}
