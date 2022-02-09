@@ -52,7 +52,9 @@ class GamePlayer: Identifiable, Equatable, ObservableObject {
     @Published var id = UUID()
     @Published var name: String = ""
     let role: Role
-    
+    var isBeingKilled = false
+    var isBeingHealed = false
+
     init(name: String, role: Role) {
         self.role = role
         self.name = name

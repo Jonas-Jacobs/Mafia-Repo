@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B282D5927B2BF0400B2094F /* PlayerActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B282D5827B2BF0400B2094F /* PlayerActionView.swift */; };
+		2B29A66327B41BD00090D08A /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29A66227B41BD00090D08A /* TransitionView.swift */; };
 		2B9BB0CE279879CE00AB62A8 /* MemberRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BB0CD279879CE00AB62A8 /* MemberRoleView.swift */; };
 		2BC32387278C85AB00D0B15E /* RolesInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC32386278C85AB00D0B15E /* RolesInfoView.swift */; };
 		2BC32389278C888900D0B15E /* Roles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC32388278C888900D0B15E /* Roles.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		2B282D5827B2BF0400B2094F /* PlayerActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerActionView.swift; sourceTree = "<group>"; };
+		2B29A66227B41BD00090D08A /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
 		2B9BB0CD279879CE00AB62A8 /* MemberRoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRoleView.swift; sourceTree = "<group>"; };
 		2BC32386278C85AB00D0B15E /* RolesInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolesInfoView.swift; sourceTree = "<group>"; };
 		2BC32388278C888900D0B15E /* Roles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roles.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				2B9BB0CD279879CE00AB62A8 /* MemberRoleView.swift */,
 				B9A1C7C0279F07FB00A98670 /* MemberDetailRoleView.swift */,
 				2B282D5827B2BF0400B2094F /* PlayerActionView.swift */,
+				2B29A66227B41BD00090D08A /* TransitionView.swift */,
 			);
 			path = "Swift-UI Mafia Files";
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				B94CCD33278C954300FA20A4 /* MafiaRoles.swift in Sources */,
 				2B9BB0CE279879CE00AB62A8 /* MemberRoleView.swift in Sources */,
 				B975271B2788E94300C27117 /* MembersList.swift in Sources */,
+				2B29A66327B41BD00090D08A /* TransitionView.swift in Sources */,
 				B927E5E02787450C003094AF /* AppDelegate.swift in Sources */,
 				B94CCD32278C954300FA20A4 /* MafiaMainScreen.swift in Sources */,
 				2B282D5927B2BF0400B2094F /* PlayerActionView.swift in Sources */,
