@@ -12,7 +12,7 @@ struct TransitionView: View {
     var body: some View {
         
         
-        Text(player.isBeingKilled)
+        Text("hello")
         
     }
 }
@@ -22,3 +22,4 @@ struct TransitionView_Previews: PreviewProvider {
         TransitionView(player: GamePlayer(name: "hello", role: .mafia))
     }
 }
+
