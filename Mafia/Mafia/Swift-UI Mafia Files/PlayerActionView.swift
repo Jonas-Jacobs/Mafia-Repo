@@ -30,7 +30,7 @@ struct PlayerList: View {
     var playerSelected: GamePlayer
     var body: some View {
         VStack{
-            NavigationLink("hello",destination: TransitionView(player: doAction(game: game, selectedPlayer: playerSelected, currentPlayer: game.players[1])))
+            NavigationLink(playerSelected.name,destination: TransitionView(player: doAction(game: game, selectedPlayer: playerSelected, currentPlayer: game.players[1])))
             
             
             
