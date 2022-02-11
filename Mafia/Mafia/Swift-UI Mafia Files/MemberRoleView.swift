@@ -6,30 +6,30 @@
 //
 
 import SwiftUI
-//class MemberRoleViewModel {
-//    private var viewedPlayers = Set<UUID>()
-//
-//    func checkViewPlayers(gamePlayer: GamePlayer) -> Bool {
-//        return viewedPlayers.contains(gamePlayer.id)
-//    }
-//    func addPlayer(gamePlayer: GamePlayer) {
-//        viewedPlayers.insert(gamePlayer.id)
-//    }
-//}
+class MemberRoleViewModel {
+    private var viewedPlayers = Set<UUID>()
+
+    func checkViewPlayers(gamePlayer: GamePlayer) -> Bool {
+        return viewedPlayers.contains(gamePlayer.id)
+    }
+    func addPlayer(gamePlayer: GamePlayer) {
+        viewedPlayers.insert(gamePlayer.id)
+    }
+}
 
 struct MemberRoleView: View {
     @StateObject var game: Game
-//    var viewModel: MemberRoleViewModel
+   
     var body: some View {
         List(game.players) { player in
-//            ButtonRow(player: player, viewModel: viewModel)
+            ButtonRow(player: player)
         }
     }
 }
 
 struct ButtonRow: View {
     var player: GamePlayer
-//    var viewModel: MemberRoleViewModel
+  
     @State var isActive = false
     var body: some View {
         NavigationLink(destination: MemberDetailRoleView(player: player), isActive: $isActive) {
