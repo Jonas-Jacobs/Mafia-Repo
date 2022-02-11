@@ -8,7 +8,7 @@
 import SwiftUI
 class MemberRoleViewModel {
     private var viewedPlayers = Set<UUID>()
-
+    
     func checkViewPlayers(gamePlayer: GamePlayer) -> Bool {
         return viewedPlayers.contains(gamePlayer.id)
     }
@@ -19,17 +19,17 @@ class MemberRoleViewModel {
 
 struct MemberRoleView: View {
     @StateObject var game: Game
-   
+    
     var body: some View {
         List(game.players) { player in
-            ButtonRow(player: player)
+            ButtonRow(player: player, game: game)
         }
     }
 }
 
 struct ButtonRow: View {
     var player: GamePlayer
-  
+    var game: Game
     @State var isActive = false
     var body: some View {
         NavigationLink(destination: MemberDetailRoleView(player: player), isActive: $isActive) {
@@ -39,8 +39,10 @@ struct ButtonRow: View {
                 }) {
                     Text(player.name)
                 }.foregroundColor(.black)
-                    
             }
+        }
+        List(game.players) {removedPlayers in
+            Text("\(player.name)")
         }
     }
 }
