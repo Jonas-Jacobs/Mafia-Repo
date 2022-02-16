@@ -18,7 +18,6 @@ struct PlayerActionView: View {
                 
                 List(game.players){ player in
                     PlayerList(game: game, playerSelected: player)
-                    
                 }
             }
         }

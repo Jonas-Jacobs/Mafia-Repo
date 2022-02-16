@@ -24,7 +24,7 @@ struct MafiaMainScreen: View {
                         Text("Mafia")
                             .font(.system(size: 100, weight: .bold))
                             .foregroundColor(Color(red: 0.6, green: 0, blue: 0))
-                            
+                        
                     }
                     
                     ZStack{
