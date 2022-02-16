@@ -11,18 +11,24 @@ struct MemberDetailRoleView: View {
     @StateObject var player: GamePlayer
     var objectDidChange: () -> Void
     var body: some View {
-        Text(player.name)
-            .font(.title)
-        VStack{
-            HStack{
-                Image(systemName: player.role.icon)
-                    .foregroundColor(Color(player.role.value))
-                Text(player.role.title)
+        Form{
+            
+            Text(player.name)
+            
+            
+            
+                .font(.title)
+            VStack(alignment: .leading){
+                HStack{
+                    Image(systemName: player.role.icon)
+                        .foregroundColor(Color(player.role.value))
+                    Text(player.role.title)
+                }
+                Text(player.role.description)
+            }.onAppear {
+                player.isViewed = true
+                objectDidChange()
             }
-            Text(player.role.description)
-        }.onAppear {
-            player.isViewed = true
-            objectDidChange()
         }
     }
 }

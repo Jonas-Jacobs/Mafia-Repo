@@ -12,7 +12,8 @@ struct TransitionView: View {
     var body: some View {
 
 
-Text("Some placeholder delete later")
+        Text("\(player.name)")
+
 //        Text(player.isBeingKilled)
 
 
