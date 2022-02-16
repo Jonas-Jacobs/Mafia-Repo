@@ -10,15 +10,17 @@ import SwiftUI
 struct MemberDetailRoleView: View {
     @StateObject var player: GamePlayer
     var body: some View {
-            Text(player.name)
-                .font(.title)
+        Text(player.name)
+            .font(.title)
         VStack{
             HStack{
-            Image(systemName: player.role.icon)
+                Image(systemName: player.role.icon)
                     .foregroundColor(Color(player.role.value))
-            Text(player.role.title)
+                Text(player.role.title)
             }
             Text(player.role.description)
+        }.onAppear {
+            player.isViewed = true
         }
     }
 }
