@@ -10,12 +10,12 @@ import SwiftUI
 struct TransitionView: View {
     @StateObject var player: GamePlayer
     var body: some View {
-
-
-Text("Some placeholder delete later")
-//        Text(player.isBeingKilled)
-
-
+        
+        
+        Text("Some placeholder delete later")
+        //        Text(player.isBeingKilled)
+        
+        
     }
 }
 
