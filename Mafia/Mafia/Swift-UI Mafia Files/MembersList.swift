@@ -13,31 +13,30 @@ struct MembersList: View {
     @State var showingMemberRoleView = false
     @State var passesValidation = false
     
-    
     var body: some View {
-        List($game.players, id: \.id) { player in
-            Section{
-                TextField("Enter your name", text: player.name, onEditingChanged: { editingChanged in
-                    isTextFieldFocused = editingChanged
-                    checkingForNames()
-                })
-            }
-        }
-        .onAppear(perform: {
-            game.players.shuffle()
-        })
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                if passesValidation == true {
-                    NavigationLink ("Submit",
-                                    destination: MemberRoleView(game: game),
-                                    isActive: $showingMemberRoleView  )
-                } else {
-                    Text("Submit")
-                        .foregroundColor(.gray)
+            List($game.players, id: \.id) { player in
+                Section{
+                    TextField("Enter your name", text: player.name, onEditingChanged: { editingChanged in
+                        isTextFieldFocused = editingChanged
+                        checkingForNames()
+                    })
                 }
             }
-        }
+            .onAppear(perform: {
+                game.players.shuffle()
+            })
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    if passesValidation == true {
+                        NavigationLink ("Submit",
+                                        destination: MemberRoleView(game: game),
+                                        isActive: $showingMemberRoleView  )
+                    } else {
+                        Text("Submit")
+                            .foregroundColor(.gray)
+                    }
+                }
+            }
     }
     
     func checkingForNames() {

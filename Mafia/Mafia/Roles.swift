@@ -8,6 +8,7 @@
 import Foundation
 import CloudKit
 import UIKit
+import SwiftUI
 
 // MARK: - Mafia
 
@@ -31,7 +32,6 @@ class Game: ObservableObject {
         }.count
     }
     
-    
     static var dummyData: Game {
         let game = Game()
         game.players = [
@@ -51,6 +51,7 @@ class Game: ObservableObject {
 class GamePlayer: Identifiable, Equatable, ObservableObject {
     @Published var id = UUID()
     @Published var name: String = ""
+    @State var isViewed: Bool = false
     let role: Role
     var isBeingKilled = false
     var isBeingHealed = false
