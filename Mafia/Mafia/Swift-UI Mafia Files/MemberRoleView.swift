@@ -9,13 +9,14 @@ import SwiftUI
 
 struct MemberRoleView: View {
     @StateObject var game: Game
+//    @StateObject var players: [GamePlayer]
     var body: some View {
         List(game.players) { player in
             if player.isViewed == false {
                         NavigationLink(destination:
-                                        MemberDetailRoleView(player: player))
+                                        MemberDetailRoleView(player: player, objectDidChange: game.objectWillChange.send))
                                        {
-                            Text(player.name)
+                                           Text("\(player.name) \(String(player.isViewed))")
                     }
             } else {
                 Button(action: {
@@ -23,7 +24,6 @@ struct MemberRoleView: View {
                     Text(player.name)
                         .foregroundColor(.gray)
                 }
-                //            ButtonRow(player: player, game: game)
             }
         }
     }
