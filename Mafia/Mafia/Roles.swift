@@ -35,9 +35,10 @@ class Game: ObservableObject {
     static var dummyData: Game {
         let game = Game()
         game.players = [
-            GamePlayer(name: "hello", role: .mafia),
-            GamePlayer(name: "hello", role: .mafia),
-            GamePlayer(name: "hello", role: .mafia)
+            GamePlayer(name: "hello1", role: .detective),
+            GamePlayer(name: "hello2", role: .mafia),
+            GamePlayer(name: "hello3", role: .mafia),
+            GamePlayer(name: "hello4", role: .villager)
         ]
         return game
     }
@@ -51,7 +52,7 @@ class Game: ObservableObject {
 class GamePlayer: Identifiable, Equatable, ObservableObject {
     @Published var id = UUID()
     @Published var name: String = ""
-    @State var isViewed: Bool = false
+    @Published var isViewed: Bool = false
     let role: Role
     var isBeingKilled = false
     var isBeingHealed = false
