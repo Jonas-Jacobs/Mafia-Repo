@@ -74,9 +74,13 @@ class GamePlayer: Identifiable, Equatable, ObservableObject {
 /// An enum to hold all the different role types.
 enum Role: String, CaseIterable, Identifiable {
     case mafia
+    case godfather
     case villager
+    case bulletproof
     case detective
     case healer
+    case gravedigger
+    
     
     var id: String {
         title
@@ -89,12 +93,18 @@ enum Role: String, CaseIterable, Identifiable {
         {
         case .mafia:
             return "Mafia members vote on one player each night to attempt to kill."
+        case .godfather:
+            return "Remains undetected by the village"
         case .villager:
             return "The Villager has no special abilites."
         case .detective:
             return "The detectives vote on one player each night to investigate who the player sides with."
         case .healer:
             return "The doctors vote on one player each night to save in case they die that night."
+        case .bulletproof:
+            return "Has two lives."
+        case .gravedigger:
+            return "Can revive a player one time during the game."
         }
     }
     
@@ -108,6 +118,9 @@ enum Role: String, CaseIterable, Identifiable {
             return "magnifyingglass"
         case .healer:
             return "bandage.fill"
+        default:
+            return "person.fill"
+        
         }
     }
 }
@@ -123,6 +136,8 @@ extension Role {
             case .detective:
                 return UIColor.black
             case .healer:
+                return UIColor.black
+            default :
                 return UIColor.black
             }
         }
