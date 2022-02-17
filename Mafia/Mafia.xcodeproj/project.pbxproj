@@ -19,6 +19,7 @@
 		B927E5F72787450D003094AF /* MafiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E5F62787450D003094AF /* MafiaTests.swift */; };
 		B927E6012787450D003094AF /* MafiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E6002787450D003094AF /* MafiaUITests.swift */; };
 		B927E6032787450D003094AF /* MafiaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927E6022787450D003094AF /* MafiaUITestsLaunchTests.swift */; };
+		B93D0C3027BEAF00004C9BC7 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D0C2F27BEAF00004C9BC7 /* UINavigationControllerExtension.swift */; };
 		B94CCD32278C954300FA20A4 /* MafiaMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94CCD30278C954300FA20A4 /* MafiaMainScreen.swift */; };
 		B94CCD33278C954300FA20A4 /* MafiaRoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94CCD31278C954300FA20A4 /* MafiaRoles.swift */; };
 		B975271B2788E94300C27117 /* MembersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975271A2788E94300C27117 /* MembersList.swift */; };
@@ -59,6 +60,7 @@
 		B927E5FC2787450D003094AF /* MafiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MafiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B927E6002787450D003094AF /* MafiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaUITests.swift; sourceTree = "<group>"; };
 		B927E6022787450D003094AF /* MafiaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B93D0C2F27BEAF00004C9BC7 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B94CCD30278C954300FA20A4 /* MafiaMainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MafiaMainScreen.swift; sourceTree = "<group>"; };
 		B94CCD31278C954300FA20A4 /* MafiaRoles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MafiaRoles.swift; sourceTree = "<group>"; };
 		B975271A2788E94300C27117 /* MembersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersList.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		B927E5DE2787450C003094AF /* Mafia */ = {
 			isa = PBXGroup;
 			children = (
+				B93D0C2E27BEAEE9004C9BC7 /* extensions */,
 				B927E5DF2787450C003094AF /* AppDelegate.swift */,
 				B927E5E12787450C003094AF /* SceneDelegate.swift */,
 				B97527172788A30100C27117 /* Swift-UI Mafia Files */,
@@ -140,6 +143,14 @@
 				B927E6022787450D003094AF /* MafiaUITestsLaunchTests.swift */,
 			);
 			path = MafiaUITests;
+			sourceTree = "<group>";
+		};
+		B93D0C2E27BEAEE9004C9BC7 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B93D0C2F27BEAF00004C9BC7 /* UINavigationControllerExtension.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		B97527172788A30100C27117 /* Swift-UI Mafia Files */ = {
@@ -295,6 +306,7 @@
 				2B282D5927B2BF0400B2094F /* PlayerActionView.swift in Sources */,
 				B927E5E22787450C003094AF /* SceneDelegate.swift in Sources */,
 				2BC32389278C888900D0B15E /* Roles.swift in Sources */,
+				B93D0C3027BEAF00004C9BC7 /* UINavigationControllerExtension.swift in Sources */,
 				2BC32387278C85AB00D0B15E /* RolesInfoView.swift in Sources */,
 				B9A1C7C1279F07FB00A98670 /* MemberDetailRoleView.swift in Sources */,
 			);

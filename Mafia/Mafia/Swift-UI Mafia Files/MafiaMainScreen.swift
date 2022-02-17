@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct MafiaMainScreen: View {
-    let bloodRed = Color(red: 50/255, green: 2/255, blue: 2/255)
+    let bloodRed = Color(red: 323/255, green: 77/255, blue: 61/255)
     let richBlack = Color(red: 190/255, green: 1/255, blue: 9/255)
     var body: some View {
         NavigationView{
             ZStack{
-                LinearGradient(gradient: Gradient(colors: [richBlack, bloodRed]),
-                               startPoint: .bottom,
-                               endPoint: .top)
+                Color(UIColor.red)
+//                LinearGradient(gradient: Gradient(colors: [richBlack, bloodRed]),
+//                               startPoint: .bottom,
+//                               endPoint: .top)
                 VStack{
                     ZStack{
                         Color(red: 0/255, green: 0/255, blue: 0/255)
@@ -23,7 +24,7 @@ struct MafiaMainScreen: View {
                             .cornerRadius(8)
                         Text("Mafia")
                             .font(.system(size: 100, weight: .bold))
-                            .foregroundColor(Color(red: 0.6, green: 0, blue: 0))
+                            .foregroundColor(.white)
                         
                     }
                     
@@ -35,6 +36,7 @@ struct MafiaMainScreen: View {
                             MafiaRoles(player: Game.dummyData.players[0])
                         } label: {
                             Text("Create new game")
+                                .foregroundColor(.white)
                         }
                         .foregroundColor(Color(red: 255/255, green: 0, blue: 0))
                     }
@@ -46,12 +48,13 @@ struct MafiaMainScreen: View {
                             RolesInfoView()
                         } label: {
                             Text("Learn rolls")
+                                .foregroundColor(.white)
                         }
                         .foregroundColor(Color(red: 1, green: 0, blue: 0))
                     }
                 }
             } .ignoresSafeArea()
-        }
+        }.accentColor(.white)
     }
 }
 
