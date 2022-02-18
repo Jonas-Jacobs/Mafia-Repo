@@ -14,20 +14,13 @@ struct MafiaMainScreen: View {
         NavigationView{
             ZStack{
                 Color(UIColor.red)
-//                LinearGradient(gradient: Gradient(colors: [richBlack, bloodRed]),
-//                               startPoint: .bottom,
-//                               endPoint: .top)
                 VStack{
                     ZStack{
                         Color(red: 0/255, green: 0/255, blue: 0/255)
                             .frame(width: 300, height: 100, alignment: .center)
                             .cornerRadius(8)
-                        Text("Mafia")
-                            .font(.system(size: 100, weight: .bold))
-                            .foregroundColor(.white)
-                        
+                        Text("Mafia").font(.system(size: 100, weight: .bold)).foregroundColor(.white)
                     }
-                    
                     ZStack{
                         Color(red: 0/255, green: 0/255, blue: 0/255)
                             .frame(width: 200, height: 50, alignment: .center)
@@ -35,8 +28,7 @@ struct MafiaMainScreen: View {
                         NavigationLink {
                             MafiaRoles(player: Game.dummyData.players[0])
                         } label: {
-                            Text("Create new game")
-                                .foregroundColor(.white)
+                            Text("Create new game").foregroundColor(.white)
                         }
                         .foregroundColor(Color(red: 255/255, green: 0, blue: 0))
                     }
@@ -47,8 +39,7 @@ struct MafiaMainScreen: View {
                         NavigationLink {
                             RolesInfoView()
                         } label: {
-                            Text("Learn rolls")
-                                .foregroundColor(.white)
+                            Text("Learn rolls").foregroundColor(.white)
                         }
                         .foregroundColor(Color(red: 1, green: 0, blue: 0))
                     }

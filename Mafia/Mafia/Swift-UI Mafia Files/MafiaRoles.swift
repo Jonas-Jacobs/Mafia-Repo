@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MafiaRoles: View {
-    // @State roll variables
     var roles = Role.allCases
     @StateObject var game = Game()
     @State private var passesValidation = false
@@ -37,6 +36,7 @@ struct MafiaRoles: View {
                 }
             }
         }
+        
         .navigationBarTitle("Select Roles")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

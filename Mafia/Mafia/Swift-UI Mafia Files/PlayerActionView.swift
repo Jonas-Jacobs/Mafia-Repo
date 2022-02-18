@@ -30,12 +30,10 @@ struct PlayerList: View {
     var body: some View {
         VStack{
             NavigationLink(playerSelected.name,destination: TransitionView(player: doAction(game: game, selectedPlayer: playerSelected, currentPlayer: game.players[1])))
-            
-            
-            
         }
     }
 }
+
 func doAction(game: Game, selectedPlayer: GamePlayer, currentPlayer: GamePlayer) -> GamePlayer {
     if currentPlayer.role == .mafia {
         selectedPlayer.isBeingKilled = true

@@ -11,14 +11,8 @@ struct MemberDetailRoleView: View {
     @StateObject var player: GamePlayer
     var objectDidChange: () -> Void
     var body: some View {
-    
+        
         Form{
-            
-            
-            
-            
-            
-                
             VStack(alignment: .leading){
                 HStack{
                     Image(systemName: player.role.icon).font(.largeTitle)
@@ -35,7 +29,6 @@ struct MemberDetailRoleView: View {
                 Text("\(player.role.description)")
             }
         }.navigationTitle(player.name)
-        
     }
 }
 
