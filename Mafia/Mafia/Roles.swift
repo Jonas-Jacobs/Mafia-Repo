@@ -121,8 +121,6 @@ enum Role: String, CaseIterable, Identifiable {
             return "flashlight.on.fill"
         case .bulletproof:
             return "shield.fill"
-        default:
-            return "person.fill"
         }
     }
 }
