@@ -10,18 +10,18 @@ import SwiftUI
 struct MemberRoleView: View {
     @StateObject var game: Game
     var body: some View {
-            List(game.players) { player in
-                if player.isViewed == false {
-                    NavigationLink(destination:
-                                    MemberDetailRoleView(player: player, objectDidChange: game.objectWillChange.send))
-                    {
-                        Text("\(player.name)")
-                    }
-                } else {
-                    Button(action: {
-                    }) {
-                        Text(player.name)
-                            .foregroundColor(.gray)
+        List(game.players) { player in
+            if player.isViewed == false {
+                NavigationLink(destination:
+                                MemberDetailRoleView(player: player, objectDidChange: game.objectWillChange.send))
+                {
+                    Text("\(player.name)")
+                }
+            } else {
+                Button(action: {
+                }) {
+                    Text(player.name)
+                        .foregroundColor(.gray)
                 }
             }
         }.navigationTitle("Tap to view roles")

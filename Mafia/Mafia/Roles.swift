@@ -21,7 +21,6 @@ struct Mafia: Identifiable{
 // MARK: - Game
 
 /// An object to hold all the data needed to make the game work.
-/// This should be updated as you go along though the setup process.
 class Game: ObservableObject {
     
     @Published var players = [GamePlayer]()
@@ -56,15 +55,14 @@ class GamePlayer: Identifiable, Equatable, ObservableObject {
     let role: Role
     var isBeingKilled = false
     var isBeingHealed = false
-
+    
     init(name: String, role: Role) {
         self.role = role
         self.name = name
     }
-
+    
     // MARK: - Equatable Methods
     static func == (lhs: GamePlayer, rhs: GamePlayer) -> Bool {
-        //TODO: FIX THIS LATER
         return true
     }
 }
@@ -80,7 +78,6 @@ enum Role: String, CaseIterable, Identifiable {
     case detective
     case healer
     case gravedigger
-    
     
     var id: String {
         title
@@ -124,9 +121,6 @@ enum Role: String, CaseIterable, Identifiable {
             return "flashlight.on.fill"
         case .bulletproof:
             return "shield.fill"
-        default:
-            return "person.fill"
-        
         }
     }
 }

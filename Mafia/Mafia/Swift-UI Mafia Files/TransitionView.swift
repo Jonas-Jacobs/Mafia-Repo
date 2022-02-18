@@ -10,9 +10,7 @@ import SwiftUI
 struct TransitionView: View {
     @StateObject var player: GamePlayer
     var body: some View {
-
         Text("\(player.name)")
-
     }
 }
 

@@ -19,7 +19,7 @@ struct MembersList: View {
                 TextField("Enter your name", text: player.name, onEditingChanged: { editingChanged in
                     isTextFieldFocused = editingChanged
                     checkingForNames()
-                })
+                }) .accentColor(.black)
             }
         }
         .navigationTitle("Enter Player names")
