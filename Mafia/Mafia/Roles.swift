@@ -112,12 +112,18 @@ enum Role: String, CaseIterable, Identifiable {
         switch self {
         case .mafia:
             return "person.fill"
+        case .godfather:
+            return "person.fill.questionmark"
         case .villager:
             return "person.3.fill"
         case .detective:
             return "magnifyingglass"
         case .healer:
             return "bandage.fill"
+        case .gravedigger:
+            return "flashlight.on.fill"
+        case .bulletproof:
+            return "shield.fill"
         default:
             return "person.fill"
         
