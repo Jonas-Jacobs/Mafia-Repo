@@ -28,7 +28,7 @@ struct MafiaMainScreen: View {
                         NavigationLink {
                             MafiaRoles(player: Game.dummyData.players[0])
                         } label: {
-                            Text("Create new game").foregroundColor(.white)
+                            Text("Start new game").foregroundColor(.white)
                         }
                         .foregroundColor(Color(red: 255/255, green: 0, blue: 0))
                     }
@@ -39,7 +39,7 @@ struct MafiaMainScreen: View {
                         NavigationLink {
                             RolesInfoView()
                         } label: {
-                            Text("Learn rolls").foregroundColor(.white)
+                            Text("Explore rolls").foregroundColor(.white)
                         }
                         .foregroundColor(Color(red: 1, green: 0, blue: 0))
                     }
